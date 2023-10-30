@@ -1,4 +1,4 @@
-package com.college.listviewtest;
+package com.college.listviewcounter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,8 +13,8 @@ import java.util.ArrayList;
     This application displays an array of items in a  Listview
     When the user clicks on the 'Add' Button:
             the Counter is incremented
-            An an item is added to the list
-            The listview display the latet values of the list
+            An item is added to the list
+            The listview display the latest values of the list
 
     The code below is incomplete.
 
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     //Counter to generate integers in the ArrayList
-    private Integer mCounter = 0;
+    private Integer myCounter = 0;
 
     //Array of items to display in listview
     private ArrayList<Integer> myItems;
@@ -41,13 +41,22 @@ public class MainActivity extends AppCompatActivity {
         //Access the button in the layout
         Button addBtn = findViewById(R.id.addBtnId);
 
+        //TODO:Create the ArrayList
+
         //Create the adapter
         ArrayAdapter<Integer> myAdapter = new ArrayAdapter<>(this,
                                         android.R.layout.simple_expandable_list_item_1,
                                         myItems);
 
+        //TODO:Set the adapter to the listview
+
+
+        //TODO:
+        //When the button is clicked, the counter is incremented
+        //and the new value is added to the list
+        //The listview is updated to display the new values
         addBtn.setOnClickListener( c -> {
-            myItems.add( mCounter++ );
+            myItems.add( myCounter++ );
 
         });
 
